@@ -1,0 +1,6 @@
+example:
+  handler: src/functions/example.handler
+  events:
+    - http:
+        path: example
+        method: get
