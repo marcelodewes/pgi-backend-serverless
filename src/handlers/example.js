@@ -1,8 +1,5 @@
-const example = async () => ({
-  statusCode: 200,
-  body: JSON.stringify({
-    message: 'Example handler',
-  }),
-});
+const { ok } = require('../helpers/http-helper');
+
+const example = async () => ok({ message: 'Example handler' });
 
 module.exports.handler = example;
