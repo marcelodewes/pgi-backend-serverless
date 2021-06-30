@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --httpPort=3001",
+    "deploy": "serverless deploy --verbose",
+    "lint:staged": "lint-staged",
+    "package": "serverless package",
+    "prepare": "husky install",
     "test": "jest --passWithNoTests --runInBand --no-cache",
-    "test:unit": "npm test -- --watch -c ./tests/jest-unit-config.js",
     "test:ci": "npm test -- --coverage",
     "test:staged": "npm test -- --findRelatedTests",
-    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --httpPort=3001",
-    "package": "serverless package",
-    "deploy": "serverless deploy --verbose"
+    "test:unit": "npm test -- --watch -c ./tests/jest-unit-config.js"
   },
   "author": "",
   "license": "ISC",
