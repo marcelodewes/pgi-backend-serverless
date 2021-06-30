@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --httpPort=3001",
     "deploy": "serverless deploy --verbose",
     "lint:staged": "lint-staged",
     "package": "serverless package",
     "prepare": "husky install",
+    "start": "serverless offline --httpPort=4000",
+    "start:dev": "export SLS_DEBUG=* && npm start -- -s dev",
     "test": "jest --passWithNoTests --runInBand --no-cache",
     "test:ci": "npm test -- --coverage",
     "test:staged": "npm test -- --findRelatedTests",
