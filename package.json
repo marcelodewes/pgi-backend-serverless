@@ -7,7 +7,8 @@
     "test:unit": "npm test -- --watch -c ./tests/jest-unit-config.js",
     "test:ci": "npm test -- --coverage",
     "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline -s dev --httpPort=3001",
-    "package": "serverless package"
+    "package": "serverless package",
+    "deploy": "serverless deploy --verbose"
   },
   "author": "",
   "license": "ISC",
