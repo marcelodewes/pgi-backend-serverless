@@ -10,5 +10,13 @@ provider:
   runtime: nodejs14.x
   lambdaHashingVersion: 20201221
 
+package:
+  individually: true
+  excludeDevDependencies: true
+  patterns:
+    - '!./**'
+    - src/**
+    - node_modules/**
+
 functions:
   - ${file(functions.yml)}
